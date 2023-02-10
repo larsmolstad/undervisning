@@ -1,0 +1,281 @@
+% Created 2023-01-29 sø. 16:53
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt, A4paper]{article}
+\usepackage[left=1in,top=.5in]{geometry}%[textheight=26cm,textwidth=17cm]
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{natbib}
+\usepackage[norsk]{babel}
+% \usepackage[linktocpage,pdfstartview=FitH,colorlinks,
+%linkcolor=blue,anchorcolor=blue,
+%citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
+\usepackage{physics}
+\usepackage{amsmath,booktabs}
+\raggedright 
+\setlength{\parskip}{1em} % larsm
+
+\author{Lars}
+\date{\today}
+\title{}
+
+\begin{document}
+
+\begin{equation*}
+\def\arraystretch{2.5}
+\begin{array}{c@{\hspace{1cm}}ll@{}}
+%\toprule
+     \multicolumn{2}{c@{}}{\text{Matte-repetisjon. Først noen oppgaver (2-5 minutter med litt trening)}} \\
+  %\cmidrule(l){2-3}
+  \hline
+    F=ma                & a=                   &  \\
+    PV=nRT              & \frac{n}{V}=         &\\
+    C=\frac{n}{V}       & V=  &\\
+      \cdot                  & 2^3\times2^{-4}=       &  \\
+     y=Ae^x             & x=  &  \\
+     y=Ae^{-kx}          & x=   &  \\
+     y=Ae^{-\frac{E}{kT}}  & E=   & \\
+     y=\ln{x}           & x=   & \\
+     \cdot              & \ln{e^{x}}=      & \\
+  (\mathrm{anta\,\, } x>0)                 & e^{\ln{x}}= &    \\
+           \cdot        & e^{a}e^{b} = &\\
+           \cdot        & \ln{x^{3}}-3\ln{x} =  &\\
+              \cdot     & \ln({AB/C}) - (\ln{A} + \ln{B} - \ln{C}) =  &\\
+         \cdot          & \dv{}{t}\left(Ae^{-kt}\right) = &\\
+  \mathrm{(konstant\, y)}& \pdv{}{x}\left(x^2y\right+\tan({\ln{y}})) = & \\
+  \dv{x^n}{x} = nx^{n-1}}& \dv{}{x}\left(\frac{1}{x}\right) = &\\
+  (a>0\,, b > 0)   &\int_a^b1/x^{2}\,dx =&\\
+  (a>0\,, b > 0)   &\int_a^b1/x \,dx =&\\
+\end{array}
+\end{equation*}
+
+
+\begin{equation*}
+\def\arraystretch{2.5}
+\begin{array}{c@{\hspace{1cm}}ll@{}}
+%\toprule
+    & \multicolumn{2}{c@{}}{\text{Noen mulige svar}} \\
+\cmidrule(l){2-3}
+    F=ma                & a=F/m                   &  \\
+    PV=nRT\hspace{1cm}  & \frac{n}{V}=\frac{P}{RT} & \\
+    C=\frac{n}{V}       & V=\frac{n}{C}  &\\
+    \cdot                    & 2^3\times2^{-4}=2^{3-4}=2^{-1}=1/2       &  \\
+     y=Ae^x             & x=\ln(y/A)  &  \\
+     y=Ae^{-kx}          & x=-\ln(y/A)/k \,\,\,\,\,\, (\mathrm{eller\,\,}  \ln(A/y)/k)   &  \\
+     y=Ae^{-\frac{E}{kT}}  & E=-kT\ln(y/A)   & \\
+     y=\ln{x}           & x=e^y   & \\
+  \cdot                      & \ln{e^{x}}=x      & \\
+  (\mathrm{anta\,\, } x>0)                 & e^{\ln{x}}=x &    \\
+       \cdot                 & e^{a}e^{b} = e^{a+b}&\\
+        \cdot                & \ln{x^{3}}-3\ln{x} = 0 &\\
+        \cdot                & \ln({AB/C}) - (\ln{A} + \ln{B} - \ln{C}) = 0 &\\
+       \cdot                 & \dv{}{t}\left(Ae^{-kt}\right) = -Ake^{-kt}&\\
+  \mathrm{(konstant\, y)}& \pdv{}{x}\left(x^2y\right+\tan({\ln{y}})) = 2xy& \\
+  \dv{x^n}{x} = nx^{n-1}}& \dv{}{x}\left(\frac{1}{x}\right) = \dv{x^{-1}}{x} = -x^{-2}=-\frac{1}{x^2}&\\
+ (a>0\,, b > 0)   &\int_a^b1/x^{2}\,dx =\left[-\frac{1}{x}\right]_{a}^{b} = -(\frac{1}{b}-\frac{1}{a}) = \frac{1}{a} - \frac{1}{b} &\\
+ (a>0\,, b > 0)   &\int_a^b1/x \,dx = \left[\ln(x)\right]_{a}^b = \ln(b)-\ln(a) = \ln(b/a)&\\
+
+\end{array}
+\end{equation*}
+
+
+
+\section*{Matte}
+
+Her er litt uformell repetisjon av ting det vil være en stor fordel å kunne godt. Skriv ned noen ganger det du har glemt.
+
+\section{Logaritmer}
+
+Per definisjon er $\ln(x)$, den naturlige logaritmen av x,  det tallet $e$ må opphøyes i for å gi x.
+
+\begin{equation*}
+\label{eq:6}
+x = e^{\ln(x)}
+\end{equation*}
+
+Så logaritmen til et tall \textit{er eksponenten}, dersom tallet skrives som $e$ opphøyd i en eksponent.
+
+Så hvis (og bare hvis)
+\begin{equation*}
+\label{eq:8}
+x = e^y
+\end{equation*}
+har vi at
+\begin{equation*}
+\label{eq:9}
+y = \ln(x)
+\end{equation*}
+Eksponent-funksjonen og logaritmen er invers-funksjoner (``undo''-funksjoner) for hverandre:\newline $e^{\ln(x)}=x$ og $\ln(e^x)=x$. 
+
+Vi må også kunne at
+\begin{equation*}
+\label{eq:10}
+e^{a+b} = e^ae^b
+\end{equation*}
+så
+\begin{equation*}
+\label{eq:12}
+e^{b+\ln(a)} = e^b e^{\ln{a}} = ae^{b}
+\end{equation*}
+
+Av samme grunn gjør logaritmen mulitiplikasjon til addisjon, og divisjon til subtraksjon
+\begin{equation*}
+\label{eq:7}
+\ln(a b) = \ln(a) + \ln(b)
+\end{equation*}
+\begin{equation*}
+\label{eq:13}
+\ln{\frac{a}{b}} = \ln{a}-\ln{b}
+\end{equation*}
+
+Relevant oppgave: Ta logaritmen på begge sider av:
+\begin{equation*}
+\label{eq:14}
+k = A e^{-\frac{E_a}{RT}}
+\end{equation*}
+og
+\begin{equation*}
+\label{eq:15}
+C = C_0 e^{-kt}
+\end{equation*}
+
+Lag noen oppgaver selv hvis dette er uklart, eller test med tall i Python R, regneark
+eller på kalkulatoren.  Husk at det er forskjell på $\log_{10}$ og
+$\ln$ (som er $\log_e$). I de fleste programmeringsspråk kalles $\ln$ $\log$,
+
+\section{Partiellderiverte}
+Det er mye partiellderivering i termodynamikken. Her er en enkel måte å forstå partiellderiverte og vanlige deriverte på. 
+
+$dx$ betyr ``en bitte liten endring'' \footnote{``... a little bit of x``; Thompson, Calculus Made Easy. Egentlig er jo den deriverte definert som en grenseverdi, men det går som regel fint å tenke på infinitesimale dx etc.} av x.
+
+$\frac{dy}{dx}$ er den deriverte, en liten endring av y delt på en
+liten endring av x. Her er y en funksjon av x, så hvis x endres
+litt så endres y litt \footnote{med mindre den deriverte er null}, og så deler man endringen av y på endringen av x. 
+
+Hvis vi nå tenker oss at energien $U$ til et system (for eksempel en flaske farris
+eller en ballong) er en funksjon av temperaturen $T$, ønsker vi kanskje å vite
+hvor raskt energien stiger når temperaturen stiger . Så da kan
+det være interessant å studere
+\begin{equation*}
+\label{eq:16}
+\frac{\mathrm{d}U}{\mathrm{d}T}\,.
+\end{equation*}
+Men hvis $U$ også er avhengig av andre variable som ikke nødvendigvis endrer seg når $T$ endrer seg, da må man ha en mer presis notasjon. Derfor  angir man helt
+eksplisitt hvilke variable som holdes konstant. Man bytter ut $d$ med
+$\partial$ og skriver f.eks.
+\begin{equation*}
+\label{eq:1}
+\left(\frac{\partial U}{\partial T}\right)_{P,n}
+\end{equation*}
+Dette kalles partiellderivering, men er ikke vanskelig. Det betyr bare at $P$ og $n$ holdes konstant. Ellers er det fortsatt bare
+``en bitte liten endring av $U$ delt på en (tilsvarende) bitte liten
+endring av $T$``, gitt at $U$ kan beskrives som som en funksjon av
+$T$, $P$ og $n$ (antall mol). Om du velger å tenke på endringen som en
+faktisk liten fysisk endring i et begerglass, eller om du bare tenker
+på egenskapene til matematiske variabler og funksjoner, er opp til
+deg.
+
+(Når det sies at $U$ er en funksjon av $T$ og $P$
+menes det forresten ikke nødvendigvis at denne funksjonen er et matematisk uttrykk
+som kan skrives ned på papir, bare at $U$ er gitt dersom $T$ og $P$
+er gitt for systemet.)
+
+Vær klar over at samme symbol ofte brukes både om en fysisk størrelse
+og om funksjonen for størrelsen, som når det står $U = U(T, V)$. $U$
+brukes da både for indre energi og for en funksjon for indre
+energi. Fra matematikken er dere kanskje vant med $z = f(x, y)$. Noen
+likninger dere vil se er ikke fysiske lover, bare beviste matematiske
+regler, av typen
+
+\begin{equation}
+\label{eq:3}
+dz = \left(\pdv{z}{x}\right)_y dx + \left(\pdv{z}{y}\right)_{x} dy
+\end{equation}
+
+(sml likning 3E.2 på side 104 Atkins 11. utgave eller 3D.2 s 140 10. utgave)
+
+\section{Dobbeltderiverte}
+\begin{equation}
+\label{eq:2}
+\dv[2]{f(x)}{x} = \dv{}{x}\dv{f(x)}{x}
+\end{equation}
+
+Eksempel:
+\begin{equation}
+\label{eq:4}
+\dv[2]{}{x}\left(x^{3}\right) = \dv{}{x}\left(3x^2\right) = 6x
+\end{equation}
+For partiellderiverte gjelder følgende regel\footnote{
+  Hvis du lurer på hvorfor:
+  \begin{equation*}
+\pdv{y}(\pdv{f(x,y)}{x}) = \lim_{\Delta y\to 0}\frac{
+  \lim_{\Delta x\to 0}
+  \frac{f(x+\Delta x, y+\Delta y) - f(x, y+\Delta y)}{\Delta x}
+  - \lim_{\Delta x\to 0}\frac{f(x+\Delta x, y) - f(x, y)}{\Delta x}}{\Delta y}
+\right).
+\end{equation*}
+Dette blir det samme som  
+\begin{equation*}
+  \pdv{x}(\pdv{f(x,y)}{y})= \lim_{\Delta x\to 0}
+  \frac{
+  \lim_{\Delta y\to 0}
+  \frac{f(x+\Delta x, y+\Delta y) - f(x+\Delta x, y)}{\Delta y}
+  - \lim_{\Delta y\to 0}\frac{f(x, y+\Delta y) - f(x, y)}{\Delta y}}{\Delta x}
+\right).
+\end{equation*}
+}
+Det er det samme om du deriverer først med hensyn på x og deretter med hensyn på y eller først med hensyn på y og deretter med hensyn på x.
+\begin{equation}
+\label{eq:5}
+\pdv[2]{f(x,y)}{x}{y} = \pdv{}{x}\left(\pdv{f(x,y)}{y}\right) = \pdv{}{y}\left(\pdv{f(x,y)}{x}\right)
+\end{equation}
+Dvs egentlig bør jeg skrive:
+\begin{equation}
+\label{eq:11}
+\pdv[2]{f(x,y)}{x}{y} = \left(\pdv{\left(\pdv{f(x,y)}{y}\right)_x}{x}\right)_y =
+\left(\pdv{\left(\pdv{f(x,y)}{x}\right)_y}{y}\right)_x
+\end{equation}
+\begin{figure}[h]
+  \centerline{\includegraphics[width=.7\textwidth]{deriverte.png}}
+  \caption{Deriverte og andrederiverte. Positiv derivert betyr at kurven stiger, positiv andrederivert betyr at den deriverte stiger.}
+  \label{fig:interp_example}
+\end{figure}
+
+\newpage
+\section{Integraler}
+Et integral er en sum over mange bittesmå ledd.
+
+De som kan litt fysikk vet at ``arbeid er lik kraft ganger strekning'', og måles i Joule (J). 1J = 1Nm (Newton meter). For eksempel gjør man et arbeid på 100 J dersom man løfter en vekt med masse 1.02kg 10 meter opp. (En vekt på 1.02kg veier ca 10N, og 10N ganger 10m er 100J). Så $W=Fs$, hvor $F$ er kraften og $s$ strekningen, hvis $F$ er konstant. Men hvis $F$ varierer må man integrere. Da blir 
+\begin{equation}
+\label{eq:17}
+W=\int_0^s F(x) dx\,.
+\end{equation}
+
+Dette er relevant for stålfjærer, molekyler og gasser som komprimeres eller utvides.
+
+
+
+\begin{figure}[h]
+  \centerline{\includegraphics[width=.7\textwidth]{integral.png}}
+  \caption{Illustrasjon av integral, her representert som et areal A. Prøv å forstå at $\dv{A}{x} = f(x).$} (Egentlig skal $dx$ gå mot null).
+  \label{fig:interp_example}
+\end{figure}
+
+  
+
+Et viktig resultat; med $F=ma$ kan vi med $\int Fdx$ regne ut endring av kinetisk energi: 
+
+\begin{equation}
+\label{eq:18}
+W = \int F dx = \int ma dx = \int m \dv{v}{t} dx =\int m \dv{v}{t} v dt = \int m v dv = \frac{1}{2} m v^2 + C
+\end{equation}
+
+
+\end{document}
