@@ -14,9 +14,6 @@
 \usepackage{capt-of}
 \usepackage{natbib}
 \usepackage[norsk]{babel}
-% \usepackage[linktocpage,pdfstartview=FitH,colorlinks,
-%linkcolor=blue,anchorcolor=blue,
-%citecolor=blue,filecolor=blue,menucolor=blue,urlcolor=blue]{hyperref}
 \usepackage{physics}
 \usepackage{amsmath,booktabs}
 \raggedright 
@@ -38,7 +35,7 @@
     F=ma                & a=                   &  \\
     PV=nRT              & \frac{n}{V}=         &\\
     C=\frac{n}{V}       & V=  &\\
-      \cdot                  & 2^3\times2^{-4}=       &  \\
+    \cdot               & 2^3\times2^{-4}=       &  \\
      y=Ae^x             & x=  &  \\
      y=Ae^{-kx}          & x=   &  \\
      y=Ae^{-\frac{E}{kT}}  & E=   & \\
@@ -141,14 +138,14 @@ Relevant oppgave: Ta logaritmen på begge sider av:
 k = A e^{-\frac{E_a}{RT}}
 \end{equation*}
 og
-\begin{equation*}
+\begin{equation*}s
 \label{eq:15}
 C = C_0 e^{-kt}
 \end{equation*}
 
-Lag noen oppgaver selv hvis dette er uklart, eller test med tall i Python R, regneark
+Lag noen oppgaver selv hvis dette er uklart, eller test med tall i Python, R, regneark
 eller på kalkulatoren.  Husk at det er forskjell på $\log_{10}$ og
-$\ln$ (som er $\log_e$). I de fleste programmeringsspråk kalles $\ln$ $\log$,
+$\ln$ (som er $\log_e$). I de fleste programmeringsspråk kalles $\ln$ $\log$.
 
 \section{Partiellderiverte}
 Det er mye partiellderivering i termodynamikken. Her er en enkel måte å forstå partiellderiverte og vanlige deriverte på. 
@@ -161,7 +158,7 @@ litt så endres y litt \footnote{med mindre den deriverte er null}, og så deler
 
 Hvis vi nå tenker oss at energien $U$ til et system (for eksempel en flaske farris
 eller en ballong) er en funksjon av temperaturen $T$, ønsker vi kanskje å vite
-hvor raskt energien stiger når temperaturen stiger . Så da kan
+hvor raskt energien stiger når temperaturen stiger. Så da kan
 det være interessant å studere
 \begin{equation*}
 \label{eq:16}
@@ -196,7 +193,7 @@ regler, av typen
 
 \begin{equation}
 \label{eq:3}
-dz = \left(\pdv{z}{x}\right)_y dx + \left(\pdv{z}{y}\right)_{x} dy
+dz = \left(\pdv{z}{x}\right)_y dx + \left(\pdv{z}{y}\right)_{x} dy\,.
 \end{equation}
 
 (sml likning 3E.2 på side 104 Atkins 11. utgave eller 3D.2 s 140 10. utgave)
@@ -230,7 +227,7 @@ Dette blir det samme som
   - \lim_{\Delta y\to 0}\frac{f(x, y+\Delta y) - f(x, y)}{\Delta y}}{\Delta x}
 \right).
 \end{equation*}
-}
+}:
 Det er det samme om du deriverer først med hensyn på x og deretter med hensyn på y eller først med hensyn på y og deretter med hensyn på x.
 \begin{equation}
 \label{eq:5}
