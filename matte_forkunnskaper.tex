@@ -148,7 +148,7 @@ eller på kalkulatoren.  Husk at det er forskjell på $\log_{10}$ og
 $\ln$ (som er $\log_e$). I de fleste programmeringsspråk kalles $\ln$ $\log$.
 
 \section{Partiellderiverte}
-Det er mye partiellderivering i termodynamikken. Her er en enkel måte å forstå partiellderiverte og vanlige deriverte på. 
+Det er mye partiellderivering i fysikalsk kjemi. Her er en enkel måte å forstå partiellderiverte og vanlige deriverte på. 
 
 $dx$ betyr ``en bitte liten endring'' \footnote{``... a little bit of x``; Thompson, Calculus Made Easy. Egentlig er jo den deriverte definert som en grenseverdi, men det går som regel fint å tenke på infinitesimale dx etc.} av x.
 
@@ -249,30 +249,34 @@ Dvs egentlig bør jeg skrive:
 \section{Integraler}
 Et integral er en sum over mange bittesmå ledd.
 
-De som kan litt fysikk vet at ``arbeid er lik kraft ganger strekning'', og måles i Joule (J). 1J = 1Nm (Newton meter). Eksempel: en vekt på 1.02 kg veier 10N; for å løfte denne vekten 10 meter opp må det gjøres et arbeid på 10N$\times$10m = 100J. Så arbeidet $W=Fs$, hvor $F$ er kraften og $s$ strekningen. Men når $F$ ikke er konstant, som hvis vi løfter vekten noen hundre km opp, må vi integrere:
-\begin{equation}
-\label{eq:17}
-W=\int_0^s F(x) dx\,.
-\end{equation}
-
-(Dette er også relevant for krefter mellom molekyler og for gasser som komprimeres eller utvides.)
-
-
-
 \begin{figure}[h]
-  \centerline{\includegraphics[width=.7\textwidth]{integral.png}}
+  \centerline{\includegraphics[width=.65\textwidth]{integral.png}}
   \caption{Illustrasjon av integral, her representert som et areal A. Prøv å forstå at $\dv{A}{x} = f(x).$} (Egentlig skal $dx$ gå mot null).
   \label{fig:interp_example}
 \end{figure}
 
+
+Vi vet at ``arbeid er lik kraft ganger strekning'', og måles i Joule (J). 1J = 1Nm (Newton meter). Eksempel: En vekt på 1.02 kg veier 10N; for å løfte denne vekten 10 meter opp må det gjøres et arbeid på 10N$\times$10m = 100J. Så arbeidet $W=Fs$, hvor $F$ er kraften og $s$ strekningen. Men hvis vi løfter vekten noen hundre km opp, er ikke lenger $F$ konstant, og da må vi integrere:
+\begin{equation*}
+\label{eq:17}
+W=\int_0^s F(x) dx\,.
+\end{equation*}
+
+(Dette er også relevant for krefter mellom molekyler og for gasser som komprimeres eller utvides.)
+
+
   
+\begin{figure}[h]
+  \centerline{\includegraphics[width=.9\textwidth]{work_sum.png}}
+  \caption{Arbeid (energi) er kraft ganger strekning, summert.}
+  \label{fig:interp_example}
+\end{figure}
 
-Et viktig resultat; med $F=ma$ kan vi med $\int Fdx$ regne ut endring av kinetisk energi: 
-
-\begin{equation}
-\label{eq:18}
-W = \int F dx = \int ma dx = \int m \dv{v}{t} dx =\int m \dv{v}{t} v dt = \int m v dv = \frac{1}{2} m v^2 + C
-\end{equation}
+(Ett viktig resultat; med $F=ma$ kan vi med $\int Fdx$ regne ut endring av kinetisk energi: 
+%\begin{equation*}
+%\label{eq:18}
+$W = \int F dx = \int ma dx = \int m \dv{v}{t} dx =\int m \dv{v}{t} v dt = \int m v dv = \frac{1}{2} m v^2 + C$)
+%\end{equation*}
 
 
 \end{document}

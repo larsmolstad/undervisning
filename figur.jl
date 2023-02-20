@@ -12,10 +12,12 @@ plot(p1, p2, p3, p4,legend=false, titlefontsize=fsiz)
 a = 1.5 # beginning of dx
 b = 1.6 # end of dx
 c = (a + b)/2
-Ax = 1.0 # x coordinate A annotation
-dAx = 0.5 # x coordinate equations
+Ax = .7 # x coordinate A annotation
+dAx = 1.1 # x coordinate for equations
+dAyrel = [.6, .75] .+ .2 # relative y coordinates for equations
 
 fun = exp
+fun = x->1/(x*.2+1)^2*10
 #fun = x->3*cos(x-.5)+3
 x = collect(range(0, 2, length= 100))
 y = fun.(x)
@@ -36,8 +38,8 @@ plot!([b, b], [0, fun(b)], label="", color=:black)
 x3 = range(a, b, length=100)
 plot!(x3, fun.(x3), label="", color=:black)
 
-annotate!(dAx, h*.75, "dA = f(x)dx", fsiz)
-annotate!(dAx, h*.6, "A(x) = ∫dA = ∫f(x)dx", fsiz)
+annotate!(dAx, h*dAyrel[2], "dA = f(x)dx", fsiz)
+annotate!(dAx, h*dAyrel[1], "A(x) = ∫dA = ∫f(x)dx", fsiz)
 annotate!(Ax, fun(Ax)*.6, "A", fsiz)
 annotate!(c, fun(c)/2, "dA", fsiz)
 plot!([b, b] .+ 0.15, [0, fun(c)/2 - .3],  color=:black, label="")
@@ -52,4 +54,41 @@ annotate!(c, z, "dx", fsiz)
 display(plot!())
 
 
-# savefig("integral.png")
+#savefig("integral.png")
+
+#--
+x = collect(range(0, 2, length= 100))
+y = x*0 .+ 10
+y[x.>1.0] .= 5
+plot(x,y, label="F", ylabel="F [N]", xlabel="x [m]")
+plot!(x, y, fillrange = 0, fillalpha = 0.35, c = 1, label="W(x)")
+plot!([1, 1], [0,5], linestyle=:dash, color=:blue, label="")
+annotate!(0.5, 6.0, "10N * 1m \n\n = 10J   ", 8)
+annotate!(1.5, 3.0, "5N * 1m \n\n = 5J   ", 8)
+p1 = plot!()
+
+x = range(x[1], x[end], length=8)
+y = 10b^2 ./((x.+b).^2)
+x2 = x .+ x[2] .- x[1]
+y2 = y
+x = [x x2]'[:]
+y = [y y2]'[:]
+plot(x,y)
+plot(x,y, label="F", xlabel="x [m]")
+plot!(x,y, fillrange=0, fillalpha = 0.35, c = 3, label="W(x)")
+annotate!(0.8, 3.0, " W = ∑F(x)Δx", fsiz)
+p2 = plot!()
+
+x = collect(range(0, 2, length= 100))
+b = 1+sqrt(2)
+y = 10b^2 ./((x.+b).^2)
+plot(x,y, label="F", xlabel="x [m]")
+plot!(x,y, fillrange=0, fillalpha = 0.35, c = 2, label="W(x)")
+annotate!(0.7, 3.0, " W = ∫F(x)dx", fsiz)
+p3 = plot!()
+
+using Plots.PlotMeasures
+plot(p1, p2, p3, size=(800, 300), left_margin=5mm, bottom_margin=5mm,
+     layout=(1,3))
+savefig("work_sum.png")
+#--
